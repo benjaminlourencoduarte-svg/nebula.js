@@ -1,0 +1,16 @@
+{
+  "name": "nebula.js",
+  "version": "1.0.0",
+  "description": "A cosmic JavaScript framework for animations and effects",
+  "main": "dist/nebula.js",
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w"
+  },
+  "keywords": ["javascript", "framework", "nebula", "animations"],
+  "author": "Benjamin",
+  "license": "MIT",
+  "devDependencies": {
+    "rollup": "^4.0.0"
+  }
+}

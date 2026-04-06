@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nebula.js Demo</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <style>
+    body {
+      background: black;
+      color: white;
+      font-family: sans-serif;
+      text-align: center;
+      padding-top: 50px;
+    }
+    #box, #circle, #star {
+      width: 100px;
+      height: 100px;
+      margin: 20px auto;
+      opacity: 0;
+    }
+    #box { background: red; }
+    #circle { background: blue; border-radius: 50%; }
+    #star { background: yellow; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 
+                                                  68% 57%, 79% 91%, 50% 70%, 
+                                                  21% 91%, 32% 57%, 2% 35%, 
+                                                  39% 35%); }
+  </style>
+</head>
+<body>
+  <h1>Hello Nebula</h1>
+  <div id="box"></div>
+  <div id="circle"></div>
+  <div id="star"></div>
+
+  <script src="./dist/nebula.js"></script>
+  <script>
+    const box = document.getElementById("box");
+    const circle = document.getElementById("circle");
+    const star = document.getElementById("star");
+
+    // Fade in the box, then move and rotate it
+    nebulajs.fadeIn(box, 1500);
+    setTimeout(() => nebulajs.moveRot(box, { x: 200, y: 100, rotation: 180, duration: 2000 }), 2000);
+nebulajs.fadeIn(circle, 1500);
+nebulajs.fadeIn(star, 1500);
+    // Circle pulses repeatedly
+    setInterval(() => nebulajs.pulse(circle, 500, 1.4), 1000);
+
+    // Star does a supernova effect after 5 seconds
+    setTimeout(() => nebulajs.supernova(star, 2000), 5000);
+
+    // Circle orbits around after 7 seconds
+    setTimeout(() => nebulajs.orbit(circle, 150, 150, 100, 5), 7000);
+  </script>
+</body>
+</html>
