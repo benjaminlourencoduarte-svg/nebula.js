@@ -3,7 +3,7 @@ nebula.js is a javascript library
 HOW TO USE:
 - unzip the file
 - get your html script ready
-- add the script to the unzipped nebula file
+- add your html/htm script to the unzipped nebula file
 - add <script src="./dist/nebula.js"></script> to your script at the "body" section of your html
 -  here are some examples of use
   ## USAGE
